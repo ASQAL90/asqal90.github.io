@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASQAL90 — aplikasi kecil untuk Windows</title>
+<meta name="description" content="Aplikasi Windows buatan sendiri: Ayo Jama'ah! untuk jadwal sholat dan TileKeeper untuk menjaga jendela program tetap di tempatnya.">
+<meta property="og:title" content="ASQAL90 — aplikasi kecil untuk Windows">
+<meta property="og:description" content="Ayo Jama'ah! dan TileKeeper. Portable, offline, tanpa akun.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230e9f6e'/><text x='50' y='68' font-size='52' font-family='system-ui' font-weight='700' fill='white' text-anchor='middle'>A</text></svg>">
+<style>
+  :root { color-scheme: light dark; --bg:#0b1220; --card:#121d33; --fg:#e9eefb; --muted:#a2b2cd; --accent:#0e9f6e; --border:#233350; }
+  @media (prefers-color-scheme: light) { :root { --bg:#f5f8fc; --card:#ffffff; --fg:#0d1a2b; --muted:#4e6076; --border:#dbe4f0; } }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background:var(--bg); color:var(--fg); line-height:1.65; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 56px 20px 64px; }
+  header { text-align: center; }
+  .mark { display: inline-grid; place-items: center; width: 60px; height: 60px; border-radius: 16px; background: var(--accent); color: #fff; font-weight: 700; font-size: 1.6rem; margin-bottom: 18px; }
+  h1 { font-size: 2.4rem; margin: 0 0 8px; letter-spacing: -.02em; }
+  .tagline { color: var(--muted); font-size: 1.08rem; margin: 0 auto; max-width: 660px; }
+  .links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
+  .btn { display: inline-block; padding: 10px 20px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: .95rem; border: 1px solid var(--border); color: var(--fg); background: var(--card); }
+  .btn:hover { border-color: var(--accent); }
+  section { margin-top: 56px; }
+  h2 { font-size: 1.25rem; margin: 0 0 6px; }
+  .sub { color: var(--muted); margin: 0 0 20px; font-size: .95rem; }
+
+  .project { display: grid; grid-template-columns: 1.05fr 1fr; gap: 22px; align-items: center; background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+  .project + .project { margin-top: 20px; }
+  @media (max-width: 780px) { .project { grid-template-columns: 1fr; } }
+  .project img { width: 100%; display: block; border-radius: 10px; border: 1px solid var(--border); }
+  .project h3 { margin: 0 0 6px; font-size: 1.35rem; letter-spacing: -.01em; }
+  .project p { margin: 0 0 10px; color: var(--muted); font-size: .95rem; }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 14px; padding: 0; list-style: none; }
+  .tags li { font-size: .78rem; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); font-weight: 600; letter-spacing: .01em; }
+  .project .links { justify-content: flex-start; margin-top: 0; gap: 10px; }
+  .project .btn { padding: 8px 16px; }
+  .project .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  ul.plain { padding-left: 1.2rem; color: var(--muted); }
+  ul.plain li { margin: 4px 0; }
+  a { color: var(--accent); }
+  .notice { margin-top: 20px; padding: 12px 16px; border: 1px solid var(--border); border-radius: 10px; background: var(--card); color: var(--muted); font-size: .9rem; }
+  footer { margin-top: 56px; text-align: center; color: var(--muted); font-size: .88rem; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <div class="mark" aria-hidden="true">A</div>
+    <h1>ASQAL90</h1>
+    <p class="tagline">Aplikasi Windows kecil yang saya buat untuk kebutuhan sendiri, lalu saya bagikan. Portable, tanpa akun, dan berjalan offline.</p>
+    <div class="links">
+      <a class="btn" href="https://github.com/asqal90">GitHub</a>
+      <a class="btn" href="https://github.com/asqal90?tab=repositories">Semua repositori</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Proyek</h2>
+    <p class="sub">Dua aplikasi, dua masalah sehari-hari.</p>
+
+    <article class="project">
+      <img src="https://asqal90.github.io/PrayerAutomation/screenshot-main.png" alt="Tampilan ringkasan jadwal Ayo Jama'ah!">
+      <div>
+        <h3>Ayo Jama'ah!</h3>
+        <p>Jadwal sholat, kalender Hijriyah, widget desktop, dan pengingat teks tanpa suara. Perhitungan dilakukan lokal lewat core Rust, tanpa kirim data ke mana pun.</p>
+        <ul class="tags">
+          <li>C# / .NET</li>
+          <li>Rust</li>
+          <li>Windows 10/11</li>
+        </ul>
+        <div class="links">
+          <a class="btn primary" href="https://asqal90.github.io/PrayerAutomation/">Situs</a>
+          <a class="btn" href="https://github.com/asqal90/PrayerAutomation">Kode</a>
+          <a class="btn" href="https://github.com/asqal90/PrayerAutomation/releases/latest">Unduh</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <img src="https://asqal90.github.io/TileKeeper/screenshot-position.png" alt="Tab Position di TileKeeper">
+      <div>
+        <h3>TileKeeper</h3>
+        <p>Utility tray yang menjalankan ulang program yang tertutup dan mengembalikan jendelanya ke monitor serta cell 3×3 yang sudah ditentukan. Awalnya dibuat untuk layar Andon di tempat kerja.</p>
+        <ul class="tags">
+          <li>C# / WinForms</li>
+          <li>.NET Framework 4.8</li>
+          <li>Windows 10/11</li>
+        </ul>
+        <div class="links">
+          <a class="btn primary" href="https://asqal90.github.io/TileKeeper/">Situs</a>
+          <a class="btn" href="https://github.com/asqal90/TileKeeper">Kode</a>
+          <a class="btn" href="https://github.com/asqal90/TileKeeper/releases/latest">Unduh</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <h2>Yang sama dari keduanya</h2>
+    <ul class="plain">
+      <li>Tidak ada akun, langganan, atau telemetri.</li>
+      <li>Bisa dijalankan dari folder mana saja; installer juga tersedia untuk Ayo Jama'ah!.</li>
+      <li>Dibangun tanpa sertifikat code signing, jadi SmartScreen bisa memberi peringatan pertama kali jalan.</li>
+      <li>Kode sumber terbuka. Ayo Jama'ah! memakai lisensi MIT; TileKeeper juga MIT.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Catatan</h2>
+    <p class="sub">Halaman ini statis dan tidak memuat skrip pelacak. Tangkapan layar diambil dari situs masing-masing proyek.</p>
+    <div class="notice">Semua unduhan mengarah ke halaman <em>latest release</em> di GitHub, jadi tautannya tidak perlu diperbarui setiap versi baru.</div>
+  </section>
+
+  <footer>
+    <a href="https://github.com/asqal90">github.com/asqal90</a>
+  </footer>
+</main>
+</body>
+</html>
